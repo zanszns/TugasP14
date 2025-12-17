@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Hitung Volume Bangun Ruang</title>
+</head>
+<body>
+
+<h2>Hitung Volume Bangun Ruang</h2>
+
+<h3>1. Balok</h3>
+Panjang : <input type="number" id="p"><br><br>
+Lebar : <input type="number" id="l"><br><br>
+Tinggi : <input type="number" id="t"><br><br>
+<button onclick="volumeBalok()">Hitung Volume Balok</button>
+
+<hr>
+
+<h3>2. Tabung</h3>
+Jari-jari : <input type="number" id="rTabung"><br><br>
+Tinggi : <input type="number" id="tTabung"><br><br>
+<button onclick="volumeTabung()">Hitung Volume Tabung</button>
+
+<hr>
+
+<h3>3. Bola</h3>
+Jari-jari : <input type="number" id="rBola"><br><br>
+<button onclick="volumeBola()">Hitung Volume Bola</button>
+
+<hr>
+
+<h3>4. Prisma Segitiga</h3>
+Tinggi Alas : <input type="number" id="tinggiAlas"><br><br>
+Panjang Alas : <input type="number" id="panjangAlas"><br><br>
+Tinggi Prisma : <input type="number" id="tinggiPrisma"><br><br>
+<button onclick="volumePrisma()">Hitung Volume Prisma</button>
+
+<hr>
+
+<h3>5. Kerucut</h3>
+Jari-jari Alas : <input type="number" id="rKerucut"><br><br>
+Tinggi Kerucut : <input type="number" id="tKerucut"><br><br>
+<button onclick="volumeKerucut()">Hitung Volume Kerucut</button>
+
+<script>
+function volumeBalok(){
+    let p = document.getElementById("p").value;
+    let l = document.getElementById("l").value;
+    let t = document.getElementById("t").value;
+    let v = p * l * t;
+    alert("Volume Balok = " + v);
+}
+
+function volumeTabung(){
+    let r = document.getElementById("rTabung").value;
+    let t = document.getElementById("tTabung").value;
+    let v = 3.14 * r * r * t;
+    alert("Volume Tabung = " + v);
+}
+
+function volumeBola(){
+    let r = document.getElementById("rBola").value;
+    let v = 3.14 * r * r * r;
+    alert("Volume Bola = " + v);
+}
+
+function volumePrisma(){
+    let ta = document.getElementById("tinggiAlas").value;
+    let pa = document.getElementById("panjangAlas").value;
+    let tp = document.getElementById("tinggiPrisma").value;
+    let v = 0.5 * ta * pa * tp;
+    alert("Volume Prisma Segitiga = " + v);
+}
+
+function volumeKerucut(){
+    let r = document.getElementById("rKerucut").value;
+    let t = document.getElementById("tKerucut").value;
+    let v = (1/3) * 3.14 * r * r * t;
+    alert("Volume Kerucut = " + v);
+}
+</script>
+
+</body>
+</html>
